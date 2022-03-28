@@ -28,8 +28,7 @@ HEADERS += decContext.h \
            decSingle.h \
            decCommon.c \
            decBasic.c \
-           Port_stdint.h \
-           VCpp_stdint.h
+           Port_stdint.h
 
 SOURCES += decBasic.c \
            decCommon.c \
