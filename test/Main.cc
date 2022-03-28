@@ -12,11 +12,11 @@
 
 
 
-void MessageOutput(QtMsgType type, const QMessageLogContext &context,
-                     const QString &msg)
+void MessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
   QByteArray lmsg = msg.toLocal8Bit();
   const char* cmsg = lmsg.constData();
+
   switch (type) {
     case QtDebugMsg:
       fprintf(stderr, "%s\n", cmsg);
@@ -30,6 +30,9 @@ void MessageOutput(QtMsgType type, const QMessageLogContext &context,
     case QtFatalMsg:
       fprintf(stderr, "Fatal: %s\n", cmsg);
       abort();
+  default:
+      fprintf(stderr, "QtInfoMsg: %s\n", cmsg);
+
   }
 }
 
