@@ -44,7 +44,7 @@
   #if !defined(int32_t)
    #if defined(_MSC_VER) 
     /* MS Visual C++ */
-    #include <VCpp_stdint.h>
+    #include <stdint.h>
    #else
     #include <stdint.h>            /* C99 standard integers           */
     // For unknown compilers, you can use portable stdint.h
